@@ -1,3 +1,3 @@
-import { loadConfig } from './config.js'
+import { loadConfig } from './config.js';
 
 console.log(loadConfig());

@@ -1,1 +1,1 @@
-await import('ts-service-starter/config')
+await import('ts-service-starter/config');
