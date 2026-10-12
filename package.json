@@ -1,5 +1,5 @@
 {
-  "name": "ts-node-starter",
+  "name": "ts-service-starter",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -9,6 +9,16 @@
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "start": "node --enable-source-maps dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./config": {
+      "types": "./dist/config.d.ts",
+      "default": "./dist/config.js"
+    }
   },
   "keywords": [],
   "author": "",
