@@ -1,19 +1,12 @@
 {
-  "include": [
-    "src",
-    "test"
-  ],
+  "include": ["src", "test"],
   "compilerOptions": {
     "module": "nodenext",
     "target": "ES2024",
     "rootDir": "src",
     "outDir": "dist",
-    "lib": [
-      "ES2024"
-    ],
-    "types": [
-      "node"
-    ],
+    "lib": ["ES2024"],
+    "types": ["node"],
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
@@ -34,6 +27,6 @@
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true,
+    "skipLibCheck": true
   }
 }
