@@ -2,22 +2,27 @@ import { defineConfig } from 'eslint/config';
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import prettier from 'eslint-config-prettier';
-import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default defineConfig(
   { ignores: ['dist', 'coverage'] },
   js.configs.recommended,
   tseslint.configs.strictTypeChecked,
   {
+    // languageOptions: how ESLint should read the code in the files it matches
     languageOptions: {
+      // parserOptions: these are settings passed to the parser
       parserOptions: {
-        projectService: true,
+        // // projectService: tells the parser how to find the TypeScript project (the tsconfig.json) that a file belongs to
+        // projectService: {
+        //   // allowDefaultProject: list of files to be linted anyway if not tsconfig is found (use default configs)
+        //   allowDefaultProject: ['*.config.*s'],
+        // },
+        // tsconfigRootDir: the folder where the parser starts looking for tsconfig.json
         tsconfigRootDir: import.meta.dirname,
       },
     },
   },
   prettier,
-  eslintConfigPrettier,
   {
     rules: {
       '@typescript-eslint/switch-exhaustiveness-check': 'error',
