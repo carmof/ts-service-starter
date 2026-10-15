@@ -19,13 +19,13 @@ export default defineConfig(
   prettier,
   eslintConfigPrettier,
   {
-    files: ['**/*.mjs'],
-    extends: [tseslint.configs.disableTypeChecked],
-  },
-  {
     rules: {
       '@typescript-eslint/switch-exhaustiveness-check': 'error',
       '@typescript-eslint/consistent-type-imports': 'error',
     },
+  },
+  {
+    files: ['**/*.mjs'],
+    extends: [tseslint.configs.disableTypeChecked],
   },
 );
