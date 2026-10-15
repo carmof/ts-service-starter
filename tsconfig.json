@@ -1,15 +1,14 @@
 {
-  "include": ["src", "test"],
+  "include": ["src", "test", "*.config.ts"],
   "compilerOptions": {
-    "module": "nodenext",
+    "module": "NodeNext",
     "target": "ES2024",
-    "rootDir": "src",
-    "outDir": "dist",
     "lib": ["ES2024"],
     "types": ["node"],
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
+    "noEmit": true,
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
