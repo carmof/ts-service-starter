@@ -12,7 +12,7 @@ export default defineConfig(
     languageOptions: {
       parserOptions: {
         projectService: true,
-        // tsconfigRootDir: import.meta.dirname
+        tsconfigRootDir: import.meta.dirname,
       },
     },
   },
@@ -21,5 +21,11 @@ export default defineConfig(
   {
     files: ['**/*.mjs'],
     extends: [tseslint.configs.disableTypeChecked],
-  } // tentar entender isso
+  },
+  {
+    rules: {
+      '@typescript-eslint/switch-exhaustiveness-check': 'error',
+      '@typescript-eslint/consistent-type-imports': 'error',
+    },
+  },
 );

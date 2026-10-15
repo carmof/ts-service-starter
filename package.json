@@ -12,7 +12,8 @@
     "start": "node --enable-source-maps dist/index.js",
     "lint": "eslint .",
     "prepare": "husky",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "exports": {
     ".": {
