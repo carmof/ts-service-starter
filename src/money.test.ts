@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import Money from './money.js';
 
 describe('Money', () => {
@@ -10,13 +10,13 @@ describe('Money', () => {
     ['10.5', 1050],
     ['-10.5', -1050],
   ])('toCents should convert valid string to cents (%s => %i)', ([input, expected]) => {
-    expect(Money.toCents(input as any)).toBe(expected);
+    expect(Money.toCents(input)).toBe(expected);
   });
 
   it.for<string>(['10,500', '10.500', '10,505', '10.505'])(
     'toCents should throw for invalid string (%s)',
     (input) => {
-      expect(() => Money.toCents(input as any)).toThrow('Invalid value format');
+      expect(() => Money.toCents(input)).toThrow('Invalid value format');
     },
   );
 
