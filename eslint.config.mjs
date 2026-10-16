@@ -12,11 +12,11 @@ export default defineConfig(
     languageOptions: {
       // parserOptions: these are settings passed to the parser
       parserOptions: {
-        // // projectService: tells the parser how to find the TypeScript project (the tsconfig.json) that a file belongs to
-        // projectService: {
-        //   // allowDefaultProject: list of files to be linted anyway if not tsconfig is found (use default configs)
-        //   allowDefaultProject: ['*.config.*s'],
-        // },
+        // projectService: tells the parser how to find the TypeScript project (the tsconfig.json) that a file belongs to
+        projectService: {
+          // allowDefaultProject: list of files to be linted anyway if no tsconfig is found (use default configs)
+          // allowDefaultProject: ['*.config.*s'],
+        },
         // tsconfigRootDir: the folder where the parser starts looking for tsconfig.json
         tsconfigRootDir: import.meta.dirname,
       },
