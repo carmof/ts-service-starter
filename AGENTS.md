@@ -22,3 +22,7 @@ Use the [Conventional Commits 1.0.0 specification](https://www.conventionalcommi
 - **Body**: Optional additional details, separated from the header by a blank line.
 - **Footer(s)**: Optional metadata, each separated from the body or previous footer by a blank line. Use `BREAKING CHANGE: <description>` to explain an incompatible change.
 - **Breaking change marker**: Add `!` before the colon (for example, `feat(api)!: ...`) to mark a breaking change; provide a `BREAKING CHANGE:` footer with details when needed.
+
+### Commit additional rules
+
+- Body's lines must not be longer than 100 characters
