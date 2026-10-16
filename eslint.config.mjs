@@ -15,7 +15,7 @@ export default defineConfig(
         // projectService: tells the parser how to find the TypeScript project (the tsconfig.json) that a file belongs to
         projectService: {
           // allowDefaultProject: list of files to be linted anyway if no tsconfig is found (use default configs)
-          // allowDefaultProject: ['*.config.*s'],
+          allowDefaultProject: ['commitlint.config.js'],
         },
         // tsconfigRootDir: the folder where the parser starts looking for tsconfig.json
         tsconfigRootDir: import.meta.dirname,
