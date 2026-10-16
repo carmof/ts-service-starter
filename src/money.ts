@@ -1,6 +1,6 @@
 // toCents(value: string): number (aceita '10,50' e '10.50', rejeita mais de 2 casas)
-export default class Money {
-  static toCents(value: string): number {
+export default {
+  toCents: (value: string): number => {
     const regex = /^(-?)(\d+)([.,](\d{1,2}))?$/;
     const match = value.match(regex);
 
@@ -18,13 +18,13 @@ export default class Money {
       (positiveMark === '-' ? -1 : 1) *
       (parseInt(integerPart) * 100 + parseInt(decimalPart.padEnd(2, '0')))
     );
-  }
+  },
 
-  static formatBRL = (cents: number) => {
+  formatBRL: (cents: number) => {
     const value = cents / 100;
     return new Intl.NumberFormat('pt-BR', {
       style: 'currency',
       currency: 'BRL',
     }).format(value);
-  };
-}
+  },
+};
